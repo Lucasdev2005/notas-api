@@ -23,6 +23,7 @@ import { LoggedUser } from "src/auth/dtos/logged-user.dto";
 import { ObjectId } from "mongodb";
 import { ParseObjectIdPipe } from "src/common/pipes/parse-object-id.pipe";
 import { AuthGuard } from "src/auth/auth.guard";
+import { CustomNoContentResponse } from "src/common/decorators/custom-no-content-response.decorator";
 
 @Controller("note")
 @ApiTags("Note")
@@ -33,7 +34,7 @@ export class NoteController {
 
   @Post()
   @ApiOperation({ summary: "Create a new note" })
-  @ApiResponse({ status: 201, description: "Note created successfully." })
+  @CustomNoContentResponse({ description: "Note created successfully." })
   async create(
     @CurrentUser() user: LoggedUser,
     @Body() createNoteDto: SaveNoteDto,
@@ -77,7 +78,7 @@ export class NoteController {
 
   @Put(":noteId")
   @ApiOperation({ summary: "Update a specific note" })
-  @ApiResponse({ status: 200, description: "Note updated successfully." })
+  @CustomNoContentResponse({ description: "Note updated successfully" })
   @ApiParam({
     name: "noteId",
     description: "The ID of the note",
@@ -95,7 +96,7 @@ export class NoteController {
 
   @Delete(":noteId")
   @ApiOperation({ summary: "Delete a specific note" })
-  @ApiResponse({ status: 200, description: "Note deleted successfully." })
+  @CustomNoContentResponse({ description: "Note deleted successfully." })
   @ApiParam({
     name: "noteId",
     description: "The ID of the note",
