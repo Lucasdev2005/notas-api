@@ -25,3 +25,25 @@
   <div>Docker</div>
   <div>Foi utilizado o Docker para containerização da aplicação e construção do ambiente de desenvolvimento de forma mais simples.</div>
 </div>
+
+
+<br/>
+<br/>
+<br/>
+
+
+<div align="center"> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" width=100 heigth=100 />
+  <div>MongoDB</div>
+  <div>Foi utilizado o MongoDB para persistência dos registros da aplicação.</div>
+</div>
+          
+<br/>
+<br/>
+<br/>
+
+<div align="center"> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"  width=100 heigth=100 />
+  <div>Swagger</div>
+  <div>Foi utilizado o Swagger junto do módulo @nestJs/swagger para construção da documentação da API.</div>
+</div>
