@@ -41,5 +41,5 @@ jobs:
       # Optionally, tag the image with `latest`
       - name: Tag and push latest image
         run: |
-          docker tag lucssdev2005/notas-api:latest yourusername/your-image-name:latest
+          docker tag lucssdev2005/notas-api:latest lucssdev2005/notas-api:latest
           docker push lucssdev2005/notas-api:latest
