@@ -8,7 +8,9 @@ async function bootstrap() {
 
   /** enable requests from another domains. */
   app.enableCors({
+    allowedHeaders: "*",
     origin: "*",
+    credentials: true,
   });
 
   /** enable global validation with class-validator. */
