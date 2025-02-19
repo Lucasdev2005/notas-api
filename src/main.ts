@@ -7,7 +7,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   /** enable requests from another domains. */
-  app.enableCors();
+  app.enableCors({
+    origin: "*",
+  });
 
   /** enable global validation with class-validator. */
   app.useGlobalPipes(new ValidationPipe());
